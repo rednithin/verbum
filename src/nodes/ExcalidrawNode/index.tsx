@@ -185,6 +185,10 @@ function ExcalidrawComponent({
 			{elements.length > 0 && (
 				<button
 					ref={buttonRef}
+					onClick={(e) => {
+						e.preventDefault();
+						e.stopPropagation();
+					}}
 					className={`excalidraw-button ${isSelected ? "selected" : ""}`}
 				>
 					<ExcalidrawImage
